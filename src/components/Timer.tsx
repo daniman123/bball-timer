@@ -23,12 +23,12 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
 
 
   const audioFiles = useMemo(() => [
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/Discord Stream Start - sound effect.mp3'] }),
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/10 Seconds Left Female Voiceline Valorant Gaming Sound Effect HD.mp3'] }),
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/Right - Sound Effect.mp3'] }),
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/Left - Sound Effect.mp3'] }),
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/_Time Over!_ Sound Effect.mp3'] }),
-    new Howl({ src: [process.env.PUBLIC_URL+'/sfx/GTA ( mission complete ) sound effect.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/Discord Stream Start - sound effect.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/10 Seconds Left Female Voiceline Valorant Gaming Sound Effect HD.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/Right - Sound Effect.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/Left - Sound Effect.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/_Time Over!_ Sound Effect.mp3'] }),
+    new Howl({ src: [process.env.PUBLIC_URL+'/bbal-timer/bball-timer/sfx/GTA ( mission complete ) sound effect.mp3'] }),
   ], []);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
     const newAudioContext = new AudioContext();
     newAudioContext.resume();
     console.log("ssssssssss")
-    
+
     audioFiles[0].play();
     intervalRef.current = setInterval(() => {
       setTime((prevTime) => prevTime - 1);
