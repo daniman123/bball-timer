@@ -24,6 +24,7 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
   useEffect(()=>{
     const newAudioContext = new AudioContext();
     newAudioContext.resume();
+    console.log("ssssssssss")
   },[])
 
 
