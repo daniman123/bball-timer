@@ -19,10 +19,13 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
     currentHand: "right",
     round: 1,
   });
-
-
-
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(()=>{
+    const newAudioContext = new AudioContext();
+    newAudioContext.resume();
+  },[])
+
 
   const audioFiles = useMemo(() => [
     new Howl({ src: [process.env.PUBLIC_URL+'/sfx/Discord Stream Start - sound effect.mp3'] }),
