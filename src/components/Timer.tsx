@@ -21,12 +21,6 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
   });
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(()=>{
-    const newAudioContext = new AudioContext();
-    newAudioContext.resume();
-    console.log("ssssssssss")
-  },[])
-
 
   const audioFiles = useMemo(() => [
     new Howl({ src: [process.env.PUBLIC_URL+'/sfx/Discord Stream Start - sound effect.mp3'] }),
@@ -62,6 +56,10 @@ const Timer: React.FC<TimerProps> = ({ setTimeUp }) => {
 
   const startTimer = () => {
     if (intervalRef.current !== null) return;
+    const newAudioContext = new AudioContext();
+    newAudioContext.resume();
+    console.log("ssssssssss")
+    
     audioFiles[0].play();
     intervalRef.current = setInterval(() => {
       setTime((prevTime) => prevTime - 1);
