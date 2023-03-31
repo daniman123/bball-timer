@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bball-timer/static/css/main.eb731be9.css",
+    "main.js": "/bball-timer/static/js/main.47f2d600.js",
+    "static/js/787.6f37cf47.chunk.js": "/bball-timer/static/js/787.6f37cf47.chunk.js",
+    "index.html": "/bball-timer/index.html",
+    "main.eb731be9.css.map": "/bball-timer/static/css/main.eb731be9.css.map",
+    "main.47f2d600.js.map": "/bball-timer/static/js/main.47f2d600.js.map",
+    "787.6f37cf47.chunk.js.map": "/bball-timer/static/js/787.6f37cf47.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb731be9.css",
+    "static/js/main.47f2d600.js"
+  ]
+}
